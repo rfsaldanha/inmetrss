@@ -15,5 +15,6 @@ RoxygenNote: 7.3.2
 Imports: 
     cli,
     stringr,
+    tibble,
     tidyRSS,
     xml2
