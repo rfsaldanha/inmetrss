@@ -1,0 +1,63 @@
+---
+output: github_document
+---
+
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+
+# inmetrss
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Fetch and parse INMET alerts.
+
+## Installation
+
+You can install the development version of inmetrss from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("rfsaldanha/inmet_alerts")
+```
+
+## Example
+
+Fetch and parse alerts feed with `parse_feed()`.
+
+
+
+```{r parse_feed}
+library(inmetrss)
+
+alerts <- parse_feed()
+
+alerts
+```
+
+
+
+You can also extract alerts by municipality codes with `parse_mun()`.
+
+
+
+```{r parse_mun}
+mun_alerts <- parse_mun(alerts)
+
+mun_alerts
+```
+

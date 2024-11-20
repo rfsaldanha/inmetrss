@@ -1,5 +1,5 @@
 Package: inmetrss
-Title: What the Package Does (One Line, Title Case)
+Title: Fetch and Parse `INMET` alerts feed
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Raphael",
@@ -7,13 +7,14 @@ Authors@R:
            role = c("aut", "cre"),
            email = "raphael.saldanha@fiocruz.br",
            comment = c(ORCID = "0000-0003-0652-8466"))
-Description: What the package does (one paragraph).
+Description: Provided functions to fetch and parse `INMET` alerts feed to data frames.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
     cli,
+    purrr,
     stringr,
     tibble,
     tidyRSS,
