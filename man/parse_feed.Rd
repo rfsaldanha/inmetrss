@@ -4,11 +4,9 @@
 \alias{parse_feed}
 \title{Fetch and parse INMET alerts RSS feed}
 \usage{
-parse_feed(feed_url = NULL, progress = TRUE)
+parse_feed(progress = TRUE)
 }
 \arguments{
-\item{feed_url}{character. INMET RSS feed. Defaults to current url.}
-
 \item{progress}{logical. Show progress bar.}
 }
 \value{
