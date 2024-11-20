@@ -4,6 +4,7 @@
 #' @param string character. String with municipalities codes.
 #'
 #' @return a tibble
+#' @export
 extract_mun <- function(identifier, string){
   res <- stringr::str_extract_all(
     string = string, 

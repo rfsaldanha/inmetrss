@@ -3,6 +3,7 @@
 #' @param alert_url character. Alert url.
 #'
 #' @return a tibble with alert data
+#' @export
 parse_alert <- function(alert_url){
 
   # Fetch alert
