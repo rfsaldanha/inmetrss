@@ -22,11 +22,18 @@ parse_feed <- function(feed_url = NULL, progress = TRUE){
   }
 
   # Fetch and parse alerts
-  purrr::map(
+  res <- purrr::map(
     .x = feed$item_link,
     .f = parse_alert,
     .progress = progress
   ) |>
     purrr::list_rbind()
 
+  # Datetime fields
+  res$sent <- lubridate::as_datetime(res$sent)
+  res$onset <- lubridate::as_datetime(res$onset)
+  res$expires <- lubridate::as_datetime(res$expires)
+
+  return(res)
+  
 }
