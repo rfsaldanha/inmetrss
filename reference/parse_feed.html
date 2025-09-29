@@ -62,15 +62,34 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">parse_feed</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> GET request successful. Parsing...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■                            </span>  11% |  ETA: 27s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■                         </span>  21% |  ETA: 24s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  32% |  ETA: 20s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■                  </span>  43% |  ETA: 16s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■              </span>  55% |  ETA: 12s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■           </span>  66% |  ETA:  9s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■        </span>  77% |  ETA:  6s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■    </span>  89% |  ETA:  3s</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘lubridate’</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■                             </span>   8% |  ETA: 41s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■                           </span>  15% |  ETA: 36s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■                        </span>  23% |  ETA: 33s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■                      </span>  29% |  ETA: 30s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  34% |  ETA: 29s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■                  </span>  44% |  ETA: 24s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■                </span>  52% |  ETA: 20s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■             </span>  61% |  ETA: 15s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■          </span>  69% |  ETA: 12s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■        </span>  76% |  ETA: 10s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■     </span>  85% |  ETA:  6s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span>  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   </span>  94% |  ETA:  2s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 62 × 14</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    identifier  sent                event responseType urgency severity certainty</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> urn:oid:2.… 2025-09-29 <span style="color: #949494;">15:11:29</span> Baix… Prepare      Future  Severe   Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> urn:oid:2.… 2025-09-28 <span style="color: #949494;">06:00:00</span> Baix… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> urn:oid:2.… 2025-09-29 <span style="color: #949494;">14:54:46</span> Chuv… Prepare      Future  Severe   Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> urn:oid:2.… 2025-09-29 <span style="color: #949494;">14:51:42</span> Chuv… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> urn:oid:2.… 2025-09-29 <span style="color: #949494;">14:47:38</span> Temp… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> urn:oid:2.… 2025-09-29 <span style="color: #949494;">14:36:20</span> Temp… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> urn:oid:2.… 2025-09-25 <span style="color: #949494;">06:00:00</span> Vent… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> urn:oid:2.… 2025-09-27 <span style="color: #949494;">06:00:00</span> Chuv… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> urn:oid:2.… 2025-09-28 <span style="color: #949494;">15:30:40</span> Chuv… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> urn:oid:2.… 2025-09-26 <span style="color: #949494;">06:00:00</span> Temp… Prepare      Future  Moderate Likely   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 52 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 7 more variables: onset &lt;dttm&gt;, expires &lt;dttm&gt;, description &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   instruction &lt;chr&gt;, mun_str &lt;chr&gt;, areaDesc &lt;chr&gt;, polygon &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -82,7 +101,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
