@@ -2,6 +2,7 @@
 #'
 #' @param alerts tibble. Created with `parse_feed()`
 #' @param progress logical. Show progress bar.
+#' @param text logical. Include text variables `description` and `instruction`
 #'
 #' @return a tibble with municipality codes and alerts data
 #' @export
@@ -9,23 +10,55 @@
 #' @examples
 #' alerts <- parse_feed()
 #' parse_mun(alerts)
-parse_mun <- function(alerts, progress = TRUE){
+parse_mun <- function(alerts, progress = TRUE, text = FALSE) {
   # Check number of rows
-  if(nrow(alerts) == 0){
+  if (nrow(alerts) == 0) {
     cli::cli_abort("Empty alerts.")
   }
 
   # Extract municipalities
   df <- purrr::map2(
     .x = alerts$identifier,
-    .y = alerts$mun_str, 
-    .f = extract_mun, 
+    .y = alerts$mun_str,
+    .f = extract_mun,
     .progress = progress
   ) |>
     purrr::list_rbind()
 
   # Subset alerts data
-  alerts_sub <- subset(alerts, select = c("identifier", "sent", "event", "responseType", "urgency", "severity", "certainty", "onset", "expires"))
+  if (isFALSE(text)) {
+    alerts_sub <- subset(
+      alerts,
+      select = c(
+        "identifier",
+        "sent",
+        "event",
+        "responseType",
+        "urgency",
+        "severity",
+        "certainty",
+        "onset",
+        "expires"
+      )
+    )
+  } else {
+    alerts_sub <- subset(
+      alerts,
+      select = c(
+        "identifier",
+        "sent",
+        "event",
+        "responseType",
+        "urgency",
+        "severity",
+        "certainty",
+        "onset",
+        "expires",
+        "description",
+        "instruction"
+      )
+    )
+  }
 
   # Merge data
   merge(df, alerts_sub, by = "identifier") |>

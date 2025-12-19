@@ -4,12 +4,14 @@
 \alias{parse_mun}
 \title{Parse alerts by municipality codes}
 \usage{
-parse_mun(alerts, progress = TRUE)
+parse_mun(alerts, progress = TRUE, text = FALSE)
 }
 \arguments{
 \item{alerts}{tibble. Created with \code{parse_feed()}}
 
 \item{progress}{logical. Show progress bar.}
+
+\item{text}{logical. Include text variables \code{description} and \code{instruction}}
 }
 \value{
 a tibble with municipality codes and alerts data
